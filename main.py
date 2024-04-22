@@ -1,3 +1,5 @@
+import unittest
+from TestTreeFind import TestTreeFind
 from tree import Tree
 from node import Node
 
@@ -9,3 +11,7 @@ tree.add(0)
 tree.add(8)
 tree.add(2)
 tree.printTree()
+
+suite = unittest.TestLoader().loadTestsFromTestCase(TestTreeFind)
+runner = unittest.TextTestRunner()
+result = runner.run(suite)
